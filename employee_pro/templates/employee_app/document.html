@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Add Document</title>
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="form-container">
+        <h2>Employees Document</h2>
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ document.as_p }}
+            <button type="submit" style="color:red">Submit Employees Document</button>
+        </form>
+    </div>
+
+{% endblock %}

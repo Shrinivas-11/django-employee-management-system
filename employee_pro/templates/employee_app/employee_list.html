@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Employee List</title>
+{% endblock %}
+
+{% block content %}
+<div class="form-container">
+<h1>Employee's Information</h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Address</th>
+        <th>Documents</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {% for emp in employees %}
+      <tr>
+        <td>{{ emp.f_name }} {{ emp.l_name }}</td>
+
+        <td>{{ emp.department.name }}</td>
+
+        <td>
+          {% if emp.address %}
+            {{ emp.address.city }}
+          {% else %}
+            No Address
+          {% endif %}
+        </td>
+
+        <td>
+          {% for doc in emp.documents.all %}
+            <a href="{{ doc.file.url }}">{{ doc.title }}</a><br>
+          {% empty %}
+            No Documents
+          {% endfor %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

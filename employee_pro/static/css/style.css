@@ -1,0 +1,28 @@
+    /* 1. This centers the whole form box on the screen */
+        .form-container {
+            width: 50%;             /* Sets the width of the box */
+            margin: 100px auto;     /* 100px top margin, 'auto' centers left/right */
+            padding: 30px;
+            border: 1px solid #ccc; /* Adds a border so you can see the box */
+            border-radius: 10px;    /* Rounds the corners */
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* 2. This centers the text "Employees Address" inside the box */
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Optional: Makes the save button fill the width */
+        .form-container button {
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }

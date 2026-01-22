@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Deparment of Employees</title>
+{% endblock %}
+
+{% block content %}
+
+    <div class="form-container" >
+        <h2>Department of Employees</h2>
+        <form method="POST">
+            {% csrf_token %}
+            {{ department.as_p }}
+            <button type="submit" style="color:red">Save Department</button>
+        </form>
+    </div>
+        
+
+{% endblock %}
